@@ -8,7 +8,7 @@ import * as firebase from 'firebase';
 })
 export class AppComponent implements OnInit {
 //some test comments
-
+//another test
   ngOnInit(){
     var config = {
       apiKey: "AIzaSyCVEp-W9Xp-jBm_ZEnDzbqySgwEuAFrdNc",
