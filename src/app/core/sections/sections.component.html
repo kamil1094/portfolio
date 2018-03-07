@@ -1,0 +1,368 @@
+<section id="technology">
+  <div class="container pad-bot">
+    <div class="row text-center">
+      <h2 class="dark-h2">Technology</h2>
+      <span class="space" style="background-color:#292b2c;"></span>
+      <p class="dark-p">Frameworks are awesome, but I also love coding from scratch. </p>
+    </div>
+
+    <div class="row row-margs">
+      <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 aligner marg-bot">
+        <div class="technology eff" title="Anuglar">
+           <img src="../../../assets/technology/tech1.svg" alt="" style="width: 200px; height: 200px; padding: 40px;">
+        </div>
+      </div>
+
+      <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 aligner marg-bot">
+        <div class="technology eff" title="NodeJs">
+           <img src="../../../assets/technology/tech2.svg" alt="" style="height: 200px; width:200px; padding: 40px;">
+        </div>
+      </div>
+
+      <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 aligner marg-bot">
+        <div class="technology eff" title="Laravel">
+           <img src="../../../assets/technology/tech3.svg" alt="" style="width: 200px; height:200px; padding: 40px;">
+        </div>
+      </div>
+    
+      <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 aligner marg-bot">
+        <div class="technology eff" title="HTML5">
+           <img src="../../../assets/technology/tech4.svg" alt="" style="width: 200px; height: 200px; padding: 40px;">
+        </div>
+      </div>
+
+      <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 aligner marg-bot">
+        <div class="technology eff" title="CSS3">
+           <img src="../../../assets/technology/tech5.svg" alt="" style="height: 200px; width:200px; padding: 40px;">
+        </div>
+      </div>
+
+      <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 aligner marg-bot">
+        <div class="technology eff" title="Bootstrap">
+           <img src="../../../assets/technology/tech6.svg" alt="" style="width: 200px; height:200px; padding: 40px;">
+        </div>
+      </div>
+    </div>      
+
+  </div>
+</section>
+
+
+<section id="portfolio">
+  <div class="container-fluid">
+    <div class="row" style="padding-bottom: 40px;">
+      <div class="col-xs-12 text-center">
+        <h2 class="light-h2">Projects</h2>
+        <span class="space"></span>
+        <p class="light-p">High quality projects that I am proud of.</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-12" style="text-align: center;">
+        <button class="btn-portfolio" [ngClass]="{'activated': frontend && backend}" (click)="onAllClick()" >All</button>
+        <button class="btn-portfolio" [ngClass]="{'activated': frontend && !backend}" (click)="onFrontendClick()" >Frontend</button>
+        <button class="btn-portfolio" [ngClass]="{'activated': !frontend && backend}" (click)="onMixedClick()" >Frontend&Backend</button>
+      </div>
+    </div>
+
+    <div id="projects" style="margin-top:20px;">
+
+      <div [@inOut] *ngIf="mixed" class="col-xs-12 col-sm-6 col-md-4 col-lg-4 ber" >
+        <div class="img-hold">
+          <swiper [config]="config" #swipper1>
+            <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="../../../assets/work/angularshop/1.jpg" alt="" class="img-responsive"></div>
+                    <div class="swiper-slide"><img src="../../../assets/work/angularshop/2.jpg" alt="" class="img-responsive"></div>
+                    <div class="swiper-slide"><img src="../../../assets/work/angularshop/3.jpg" alt="" class="img-responsive"></div>
+                    <div class="swiper-slide"><img src="../../../assets/work/angularshop/4.jpg" alt="" class="img-responsive"></div>
+                    <div class="swiper-slide"><img src="../../../assets/work/angularshop/5.jpg" alt="" class="img-responsive"></div>
+                    <div class="swiper-slide"><img src="../../../assets/work/angularshop/6.jpg" alt="" class="img-responsive"></div>
+            </div>
+          </swiper> 
+        </div>
+        <span class="work-title">Online Shop</span>
+        <span class="work-hover">
+            <span *ngIf="swiper1" (click)="onSwipper1()" class="animation">
+                <i class="fa fa-pause" aria-hidden="true"></i>
+            </span>
+            <span *ngIf="!swiper1" (click)="onSwipper1()" class="animation">
+                <i class="fa fa-play" aria-hidden="true"></i>
+            </span>
+          <span class="used-tech">
+              <ul> 
+                Technologies
+                <li>AngularJS</li>
+                <li>Bootstrap</li>
+                <li>Code Igniter</li>
+              </ul>
+          </span>
+          <span class="centered-span" title="github rep">
+            <a href="">
+              <i class="fa fa-github fa-4" aria-hidden="true"></i>
+            </a>
+          </span>
+        </span>
+      </div>
+
+      <div [@inOut] *ngIf="mixed" class="col-xs-12 col-sm-6 col-md-4 col-lg-4 ber" >
+        <div class="img-hold">
+          <swiper [config]="config" #swipper2>
+              <div class="swiper-wrapper">
+                      <div class="swiper-slide"><img src="../../../assets/work/laravelsocial/1.jpg" alt="" class="img-responsive"></div>
+                      <div class="swiper-slide"><img src="../../../assets/work/laravelsocial/2.jpg" alt="" class="img-responsive"></div>
+                      <div class="swiper-slide"><img src="../../../assets/work/laravelsocial/3.jpg" alt="" class="img-responsive"></div>
+                      <div class="swiper-slide"><img src="../../../assets/work/laravelsocial/4.jpg" alt="" class="img-responsive"></div>
+              </div>
+          </swiper>
+        </div>
+
+        <span class="work-title">Social Media App</span>
+        <span class="work-hover">
+          <span *ngIf="swiper2" (click)="onSwipper2()" class="animation">
+              <i class="fa fa-pause" aria-hidden="true"></i>
+          </span>
+          <span *ngIf="!swiper2" (click)="onSwipper2()" class="animation">
+              <i class="fa fa-play" aria-hidden="true"></i>
+          </span>
+          <span class="used-tech">
+              <ul> 
+                Technologies
+                <li>Laravel</li>
+                <li>Bootstrap</li>
+              </ul>
+          </span>
+          <span class="centered-span" title="github rep">
+            <a href="">
+              <i class="fa fa-github fa-4" aria-hidden="true"></i>
+            </a>
+          </span>
+        </span>
+      </div>
+
+      <div [@inOut] *ngIf="frontend"class="col-xs-12 col-sm-6 col-md-4 col-lg-4 ber" >
+        <div class="img-hold">
+          <img src="../../../assets/work/photo3.jpg" alt="" class="img-responsive">
+        </div>
+        <span class="work-title">Shop with AngularJS</span>
+        <span class="work-hover">
+          <span class="centered-span" title="github rep">
+            <a href="">
+              <i class="fa fa-github fa-4" aria-hidden="true"></i>
+            </a>
+          </span>
+        </span>
+      </div>
+
+      <div [@inOut] *ngIf="frontend" class="col-xs-12 col-sm-6 col-md-4 col-lg-4 ber" >
+        <div class="img-hold">
+          <img src="../../../assets/work/photo4.jpg" alt="" class="img-responsive">
+        </div>
+        <span class="work-title">Shop with AngularJS</span>
+        <span class="work-hover">
+          <span class="centered-span" title="github rep">
+            <a href="">
+              <i class="fa fa-github fa-4" aria-hidden="true"></i>
+            </a>
+          </span>
+        </span>
+      </div>
+
+      <div [@inOut] *ngIf="frontend" class="col-xs-12 col-sm-6 col-md-4 col-lg-4 ber" >
+        <div class="img-hold">
+          <img src="../../../assets/work/photo5.jpg" alt="" class="img-responsive">
+        </div>
+        <span class="work-title">Shop with AngularJS</span>
+        <span class="work-hover">
+          <span class="centered-span" title="github rep">
+            <a href="">
+              <i class="fa fa-github fa-4" aria-hidden="true"></i>
+            </a>
+          </span>
+        </span>
+      </div>
+
+      <div [@inOut] *ngIf="frontend" class="col-xs-12 col-sm-6 col-md-4 col-lg-4 ber" >
+        <div class="img-hold">
+          <img src="../../../assets/work/photo6.jpg" alt="" class="img-responsive">
+        </div>
+
+        <span class="work-title">Shop with AngularJS</span>
+        <span class="work-hover">
+          <span class="centered-span" title="github rep">
+            <a href="">
+              <i class="fa fa-github fa-4" aria-hidden="true"></i>
+            </a>
+          </span>
+        </span>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section id="ideology">
+  <div class="container">
+    <div class="row text-center">
+      <h2 class="dark-h2">Ideology</h2>
+      <span class="space" style="background-color: #292b2c;"></span>
+      
+        <p class="dark-p">"Make it as simple as possible, but not simpler."<br></p>
+        <span class="quote-a">~Albert Einstein</span>
+    </div>
+    <div class="row row-margs">
+      <div  animateOnScroll animationName="fadeInUp" class="col-sm-4 col-md-4 col-lg-4 aligner animated fade" >
+        <div class="media">
+          <div class="pull-left">
+            <i class="fa fa-pencil font-border" aria-hidden="true"></i>
+          </div>
+          <div class="media-body">
+            <h3 style="margin-bottom: 5px; margin-top: 0;">PLAN</h3>
+            <ul>
+              <li>Client interview</li>
+              <li>Client understanding</li>
+              <li>Gathering consumer data</li>
+              <li>Createing content strategy</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div style="animation-delay: 0.3s;" animateOnScroll animationName="fadeInUp" class="col-sm-4 col-md-4 col-lg-4 aligner animated fade">
+        <div class="media">
+          <div class="pull-left">
+            <i class="fa fa-cogs font-border" aria-hidden="true"></i>
+          </div>
+          <div class="media-body">
+            <h3 style="margin-bottom: 5px; margin-top: 0;">CREATE</h3>
+            <ul style="padding:0; list-style: inside;">
+              <li>Building wireframe</li>
+              <li>Gathering client feedback</li>
+              <li>Code development</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div style="animation-delay: 0.6s;" animateOnScroll animationName="fadeInUp" class="col-sm-4 col-md-4 col-lg-4 aligner animated fade">
+        <div class="media">
+          <div class="pull-left">
+            <i class="fa fa-fighter-jet font-border" aria-hidden="true"></i>
+          </div>
+          <div class="media-body">
+            <h3 style="margin-bottom: 5px; margin-top: 0;">LAUNCH</h3>
+            <ul style="padding:0; list-style: inside;">
+              <li>Deploy website</li>
+              <li>Analyze client feedback</li>
+              <li>Last amendments</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="container pad-bot">
+    <div class="row">
+      <div class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2 col-lg-6 col-lg-offset-3 text-center">
+        <h2 class="light-h2">Contact</h2>
+        <span class="space"></span>
+        <p class="light-p">I would love to hear about your idea! Just send me a note.</p>
+      </div>
+    </div>
+    <div class="row row-margs">
+      <div class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2 col-lg-6 col-lg-offset-3">
+        <form [formGroup]="msgForm" (ngSubmit)="onSubmit(); myForm.resetForm()"#myForm="ngForm">
+						<div class="row">
+							<div class="col-sm-6">
+								<div class="form-group">
+									<div class="controls">
+                    
+                    <md-form-field class="example-full-width">
+                        <input mdInput placeholder="Subject *" formControlName="subject" id="subject" type="text">
+                        <md-error *ngIf="msgForm.get('subject').hasError('required')">
+                          Subject is <strong>required</strong>
+                        </md-error>
+                    </md-form-field>                    
+                    <md-error *ngIf="msgForm.get('subject').hasError('email')">
+                      Please enter a valid email address
+                    </md-error>
+
+									</div>
+								</div>
+							</div><!-- /.column -->
+							<div class="col-sm-6">
+								<div class="form-group">
+									<div class="controls">
+
+                    <md-form-field class="example-full-width">
+                      <input mdInput placeholder="Phone" formControlName="phone" id="phone" type="text">
+                    </md-form-field>
+
+									</div>
+								</div>
+							</div><!-- /.column -->
+						</div><!-- /.row -->
+						<div class="row">
+							<div class="col-sm-6">
+								<div class="form-group">
+									<div class="controls">
+
+                    <md-form-field class="example-full-width">
+                        <input mdInput placeholder="Name" formControlName="name" id="name" type="text">
+                    </md-form-field>
+
+									</div>
+								</div>
+							</div><!-- /.column -->
+							<div class="col-sm-6">
+								<div class="form-group">
+									<div class="controls">
+
+                      <md-form-field class="example-full-width">
+                          <input mdInput placeholder="Email *" formControlName="email" id="email" type="text">
+                          <md-error *ngIf="msgForm.get('email').hasError('required')">
+                            Subject is <strong>required</strong>
+                          </md-error>
+                          <md-error *ngIf="msgForm.get('email').hasError('email') && !msgForm.get('email').hasError('required')">
+                              Please enter a valid email address
+                          </md-error>
+                      </md-form-field>                    
+
+
+									</div>
+								</div>
+							</div><!-- /.column -->
+						</div><!-- /.row -->
+						<div class="row">
+							<div class="col-sm-12">
+								<div class="form-group">
+									<div class="controls">
+                    
+                      <md-form-field class="example-full-width">
+                        <textarea mdInput class="form-control" id="message" formControlName="message" placeholder="Message *" rows="7"></textarea>
+                        <md-error *ngIf="msgForm.get('message').hasError('required')">
+                          Subject is <strong>required</strong>
+                        </md-error>
+                      </md-form-field>    
+
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-sm-12 text-right">
+								<button  type="submit" id="submit" [disabled]="!msgForm.valid" [ngClass]="{'disabled': !msgForm.valid}" class="btn-portfolio"  style="pointer-events: all; cursor: pointer;">Send</button>
+							</div><!-- /.column -->
+						</div><!-- /.row -->
+			    </form>
+      </div>
+    </div>
+  </div>
+
+  
+</section>
+<footer>
+  <div class="container">
+    <p id="footer">© 2017 Kamil Ciuła</p>
+  </div>
+</footer>

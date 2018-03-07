@@ -1,0 +1,64 @@
+.navbar{
+    margin-bottom: 0px;
+    border: 0;
+    border-radius:0; 
+}
+
+nav {
+     background-color: rgba(0, 0, 0, 0);
+     z-index: 10;
+     transition: 0.6s;
+}
+
+.navbar-nav>li>a{
+    color: white;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    border-radius: 10px;
+}
+
+.navbar-nav>li{
+    transition: all 0.3s ease;
+}
+
+.navbar-nav>li>a:hover{
+    color: #8980fe;
+}
+
+.navbar-nav>li:hover{
+    border-bottom: 2px solid #8980fe;
+}
+
+.container-fluid{
+    max-width: 900px;
+}
+
+.navbar-collapse{
+    width: 100%;
+}
+
+.navbar-right{
+    padding:15px;
+}
+
+.sticky{
+    background-color: rgb(47, 47, 47);
+    padding-top: 0px;
+    padding-bottom: 0px;
+    transition: 0.3s;
+}
+
+a{
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+}
+
+.active:hover{
+    background-color: white!important;
+    border-radius: 10px;
+    color: black!important;
+}
+

@@ -1,0 +1,15 @@
+
+<div class="container">
+    <div class="row">
+        <a *ngIf="authService.user | async" class="btn btn-primary">Welcom Admin {{(authService.user | async)?.email}}</a>
+      </div>
+  <li *ngFor="let message of messages | async">
+    {{message.subject | json}}
+  </li>
+  <button class="btn btn-primary" (click)="onLogout()">Log Out</button>
+  <button (click)="getToken()">Token</button>
+  <button (click)="saveAdmin()">AdminId and Save</button>
+  <button (click)="saveUser()">UserId and Save</button>
+  {{token}} <br>
+  {{id}}
+</div>
